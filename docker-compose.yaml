@@ -1,10 +1,11 @@
 services:
   remote-gemini:
     build: .
-    container_name: ttyd
     ports:
       - "7681:7681"
-    command: gemini
+    command: gemini --show-memory-usage
     environment:
       TTYD_USER: user
       TTYD_PASS: pass123
+    volumes:
+      - ~/.gemini:/root/.gemini
