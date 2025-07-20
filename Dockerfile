@@ -22,4 +22,5 @@ RUN npm install -g @google/gemini-cli
 
 ENTRYPOINT ["entrypoint.sh"]
 
-CMD ["bash"]  # dummy! see entrypoint.sh
+# dummy! see entrypoint.sh
+CMD ["bash"]

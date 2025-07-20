@@ -3,9 +3,14 @@ services:
     build: .
     ports:
       - "7681:7681"
-    command: gemini --show-memory-usage
+      - "7682:7682"
+      - "7683:7683"
+    command: gemini --yolo --show-memory-usage
+    working_dir: /app
     environment:
+      BASE_PATH: /1
       TTYD_USER: user
       TTYD_PASS: pass123
     volumes:
+      - ./app:/app
       - ~/.gemini:/root/.gemini
