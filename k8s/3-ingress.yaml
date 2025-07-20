@@ -1,0 +1,64 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: gemini
+  name: gemini-ingress
+spec:
+  tls:
+    - hosts:
+        - CHANGEME.example.com
+      secretName: tls-secret
+  rules:
+    - host: CHANGEME.example.com
+      http:
+        paths:
+          - path: /1
+            pathType: Prefix
+            backend:
+              service:
+                name: gemini1-on-remote
+                port:
+                  number: 7681
+          - path: /1/free0
+            pathType: Prefix
+            backend:
+              service:
+                name: gemini1-on-remote
+                port:
+                  number: 8000
+          - path: /1/free1
+            pathType: Prefix
+            backend:
+              service:
+                name: gemini1-on-remote
+                port:
+                  number: 8001
+          - path: /1/free2
+            pathType: Prefix
+            backend:
+              service:
+                name: gemini1-on-remote
+                port:
+                  number: 8002
+          - path: /1/free3
+            pathType: Prefix
+            backend:
+              service:
+                name: gemini1-on-remote
+                port:
+                  number: 8003
+          - path: /1/free4
+            pathType: Prefix
+            backend:
+              service:
+                name: gemini1-on-remote
+                port:
+                  number: 8004
+          - path: /1/free5
+            pathType: Prefix
+            backend:
+              service:
+                name: gemini1-on-remote
+                port:
+                  number: 8005
+  ingressClassName: cilium

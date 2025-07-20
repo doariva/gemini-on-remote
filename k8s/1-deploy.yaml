@@ -1,0 +1,35 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gemini1-on-remote
+  namespace: gemini
+  labels:
+    app: gemini1-on-remote
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gemini1-on-remote
+  template:
+    metadata:
+      labels:
+        app: gemini1-on-remote
+    spec:
+      containers:
+        - name: gemini1-on-remote
+          image: CHANGEME/gemini-on-remote
+          imagePullPolicy: Always
+          args: 
+            # you can choose anything
+            - gemini --yolo --show-memory-usage
+            # - bash
+            # - node
+            # - python3
+          env:
+            - name: BASE_PATH
+              value: "/1"
+            - name: TTYD_USER
+              value: "user"
+            - name: TTYD_PASS
+              value: "pass123"

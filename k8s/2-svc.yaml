@@ -1,0 +1,37 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gemini1-on-remote
+spec:
+  selector:
+    app: gemini1-on-remote
+  ports:
+    - name: ttyd
+      port: 7681
+      targetPort: 7681
+      protocol: TCP
+    - name: free0
+      port: 8000
+      targetPort: 8000
+      protocol: TCP
+    - name: free1
+      port: 8001
+      targetPort: 8001
+      protocol: TCP
+    - name: free2
+      port: 8002
+      targetPort: 8002
+      protocol: TCP
+    - name: free3
+      port: 8003
+      targetPort: 8003
+      protocol: TCP
+    - name: free4
+      port: 8004
+      targetPort: 8004
+      protocol: TCP
+    - name: free5
+      port: 8005
+      targetPort: 8005
+      protocol: TCP
