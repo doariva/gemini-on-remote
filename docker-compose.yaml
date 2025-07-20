@@ -12,4 +12,4 @@ services:
       TTYD_PASS: pass123
     volumes:
       - ./app:/app
-      - ~/.gemini:/root/.gemini
+      # - ~/.gemini:/root/.gemini
