@@ -21,7 +21,7 @@ docker compose up -d
 By default, the container will start Gemini CLI (gemini) in a shared tmux session. Open your browser and go to:
 
 ```
-http://<your-server-ip>:7681
+http://<your-server-ip>:7681/1
 ```
 
 ### Custom Command
