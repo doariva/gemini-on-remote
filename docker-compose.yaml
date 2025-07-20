@@ -6,7 +6,6 @@ services:
       - "7682:7682"
       - "7683:7683"
     command: gemini --yolo --show-memory-usage
-    working_dir: /app
     environment:
       BASE_PATH: /1
       TTYD_USER: user

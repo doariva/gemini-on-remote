@@ -20,6 +20,8 @@ COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 RUN npm install -g @google/gemini-cli
 
+WORKDIR /app
+
 ENTRYPOINT ["entrypoint.sh"]
 
 # dummy! see entrypoint.sh
