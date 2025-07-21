@@ -3,8 +3,11 @@ services:
     build: .
     ports:
       - "7681:7681"
-      - "7682:7682"
-      - "7683:7683"
+      - "8001:8001"
+      - "8002:8002"
+      - "8003:8003"
+      - "8004:8004"
+      - "8005:8005"
     command: gemini --yolo --show-memory-usage
     environment:
       BASE_PATH: /1
